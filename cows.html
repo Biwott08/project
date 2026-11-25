@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cow Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Dairy Farm Management System</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="cows.html">Cow Management</a>
+        <a href="milk.html">Milk Production</a>
+        <a href="health.html">Animal Health</a>
+        <a href="breeding.html">Breeding</a>
+        <a href="sales.html">Milk Sales</a>
+        <a href="expenses.html">Expenses</a>
+    </nav>
+
+    <main>
+
+        <h2>Cow Management</h2>
+
+        <form id="cowForm">
+
+            <label>Tag Number:</label>
+            <input type="text" id="tagNumber" required>
+
+            <label>Cow Name:</label>
+            <input type="text" id="cowName" required>
+
+            <label>Breed:</label>
+            <input type="text" id="breed" required>
+
+            <label>Sex:</label>
+            <select id="sex" required>
+                <option value="">Select sex</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+
+            <label>Date of Birth:</label>
+            <input type="date" id="dob">
+
+            <label>Status:</label>
+            <select id="status">
+                <option value="Active">Active</option>
+                <option value="Dry">Dry</option>
+                <option value="Sold">Sold</option>
+            </select>
+
+            <button type="submit">Register Cow</button>
+
+        </form>
+
+        <h2>Registered Cows</h2>
+
+        <!-- Cow Search Section -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="cowSearch"
+                placeholder="Search by cow name or tag number..."
+            >
+        </div>
+
+        <!-- Registered Cows Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag Number</th>
+                    <th>Name</th>
+                    <th>Breed</th>
+                    <th>Sex</th>
+                    <th>Date of Birth</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="cowTable">
+            </tbody>
+        </table>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

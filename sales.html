@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Sales</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Dairy Farm Management System</h1>
+</header>
+
+<nav>
+    <a href="index.html">Dashboard</a>
+    <a href="cows.html">Cow Management</a>
+    <a href="milk.html">Milk Production</a>
+    <a href="health.html">Animal Health</a>
+    <a href="breeding.html">Breeding</a>
+    <a href="sales.html">Milk Sales</a>
+    <a href="expenses.html">Expenses</a>
+</nav>
+
+<main>
+    <h2>Milk Sales Records</h2>
+
+    <form id="salesForm">
+        <label>Sale Date:</label>
+        <input type="date" id="saleDate" required>
+
+        <label>Buyer / Customer:</label>
+        <input type="text" id="buyer" required>
+
+        <label>Quantity Sold (Litres):</label>
+        <input type="number" id="quantitySold" min="0" step="0.1" required>
+
+        <label>Price Per Litre (KES):</label>
+        <input type="number" id="pricePerLitre" min="0" step="0.01" required>
+
+        <button type="submit">Save Sale</button>
+    </form>
+
+    <h2>Sales History</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Buyer</th>
+                <th>Quantity (L)</th>
+                <th>Price Per Litre</th>
+                <th>Total Amount (KES)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="salesTable"></tbody>
+    </table>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeding Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Dairy Farm Management System</h1>
+</header>
+
+<nav>
+    <a href="index.html">Dashboard</a>
+    <a href="cows.html">Cow Management</a>
+    <a href="milk.html">Milk Production</a>
+    <a href="health.html">Animal Health</a>
+    <a href="breeding.html">Breeding</a>
+    <a href="sales.html">Milk Sales</a>
+    <a href="expenses.html">Expenses</a>
+</nav>
+
+<main>
+    <h2>Breeding Records</h2>
+
+    <form id="breedingForm">
+        <label>Cow Tag Number:</label>
+        <input type="text" id="breedingCowTag" required>
+
+        <label>Insemination Date:</label>
+        <input type="date" id="inseminationDate" required>
+
+        <label>Breeding Method:</label>
+        <select id="breedingMethod" required>
+            <option value="">Select method</option>
+            <option value="Artificial Insemination">Artificial Insemination</option>
+            <option value="Natural Mating">Natural Mating</option>
+        </select>
+
+        <label>Bull or Semen Details:</label>
+        <input type="text" id="bullDetails">
+
+        <label>Expected Calving Date:</label>
+        <input type="date" id="calvingDate">
+
+        <button type="submit">Save Breeding Record</button>
+    </form>
+
+    <h2>Breeding History</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cow Tag</th>
+                <th>Insemination Date</th>
+                <th>Method</th>
+                <th>Bull Details</th>
+                <th>Expected Calving</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="breedingTable"></tbody>
+    </table>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

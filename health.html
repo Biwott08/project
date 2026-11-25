@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Health</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Dairy Farm Management System</h1>
+</header>
+
+<nav>
+    <a href="index.html">Dashboard</a>
+    <a href="cows.html">Cow Management</a>
+    <a href="milk.html">Milk Production</a>
+    <a href="health.html">Animal Health</a>
+    <a href="breeding.html">Breeding</a>
+    <a href="sales.html">Milk Sales</a>
+    <a href="expenses.html">Expenses</a>
+</nav>
+
+<main>
+    <h2>Animal Health Records</h2>
+
+    <form id="healthForm">
+        <label>Cow Tag Number:</label>
+        <input type="text" id="healthCowTag" required>
+
+        <label>Date:</label>
+        <input type="date" id="healthDate" required>
+
+        <label>Health Record Type:</label>
+        <select id="healthType" required>
+            <option value="">Select type</option>
+            <option value="Vaccination">Vaccination</option>
+            <option value="Treatment">Treatment</option>
+            <option value="Illness">Illness</option>
+            <option value="Veterinary Visit">Veterinary Visit</option>
+        </select>
+
+        <label>Description:</label>
+        <textarea id="healthDescription" required></textarea>
+
+        <label>Treatment Given:</label>
+        <input type="text" id="treatment">
+
+        <button type="submit">Save Health Record</button>
+    </form>
+
+    <h2>Health History</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cow Tag</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Treatment</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="healthTable"></tbody>
+    </table>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
