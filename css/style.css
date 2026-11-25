@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f7f4;
+    color: #26352c;
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(135deg, #145c38, #218653);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 14px;
+    color: #e1f2e7;
+}
+
+
+nav {
+    background: #10452c;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #26764b;
+    color: white;
+}
+
+
+main {
+    width: 92%;
+    max-width: 1250px;
+    margin: 35px auto;
+    min-height: 60vh;
+}
+
+main h2 {
+    color: #176b45;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+
+.welcome {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 5px solid #218653;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.welcome h2 {
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #68766c;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    border-top: 4px solid #218653;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0,0,0,0.09);
+}
+
+.card h3 {
+    color: #68766c;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    color: #176b45;
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #89948c;
+    font-size: 12px;
+}
+
+
+.modules {
+    margin-top: 35px;
+}
+
+.modules > h2 {
+    margin-bottom: 22px;
+}
+
+.activities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.module-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0,0,0,0.09);
+}
+
+.module-card h3 {
+    color: #176b45;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.module-card p {
+    color: #68766c;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.module-card a {
+    display: inline-block;
+    background: #176b45;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.module-card a:hover {
+    background: #10452c;
+}
+
+
+form {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.05);
+}
+
+form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #35483b;
+    font-size: 14px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #d5ded7;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    background: #fbfdfb;
+    color: #26352c;
+    transition: 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #218653;
+    box-shadow: 0 0 0 3px rgba(33,134,83,0.12);
+    background: white;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+button {
+    background: #176b45;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 3px;
+}
+
+button:hover {
+    background: #10452c;
+}
+
+button[data-action="edit"] {
+    background: #2878bd;
+}
+
+button[data-action="edit"]:hover {
+    background: #195b91;
+}
+
+button[data-action="delete"] {
+    background: #d94343;
+}
+
+button[data-action="delete"]:hover {
+    background: #ae2929;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+table th {
+    background: #176b45;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 13px;
+}
+
+table td {
+    padding: 13px 15px;
+    border-bottom: 1px solid #e8eee9;
+    font-size: 13px;
+    color: #35483b;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f7faf8;
+}
+
+table tbody tr:hover {
+    background: #edf6f0;
+}
+
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+footer {
+    background: #10452c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 45px;
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .activities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .activities {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+    }
+
+    button {
+        padding: 9px 12px;
+    }
+
+    .welcome {
+        padding: 20px;
+    }
+
+}
